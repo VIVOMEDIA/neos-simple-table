@@ -1,0 +1,9 @@
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+        'VIVOMEDIA.SimpleTable': TRUE
+    userInterface:
+      translation:
+        autoInclude:
+          'VIVOMEDIA.SimpleTable': ['NodeTypes/*']

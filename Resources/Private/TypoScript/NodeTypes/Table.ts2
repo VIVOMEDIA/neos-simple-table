@@ -1,0 +1,12 @@
+prototype(VIVOMEDIA.SimpleTable:Table) < prototype(TYPO3.Neos:Content) {
+
+  attributes.class = TYPO3.TypoScript:RawArray {
+    responsive = 'table-responsive'
+  }
+
+  table = VIVOMEDIA.SimpleTable:HtmlTable {
+    @context.data = VIVOMEDIA.SimpleTable:CsvParser {
+      csv = ${q(node).property('data')}
+    }
+  }
+}

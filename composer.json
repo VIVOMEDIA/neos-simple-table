@@ -1,10 +1,10 @@
 {
   "name": "vivomedia-neos/simple-table",
-  "type": "typo3-flow-package",
-  "description": "",
+  "type": "neos-package",
+  "description": "Simple Html-Table NodeType for Neos CMS",
+  "license": "MIT",
   "require": {
-    "typo3/neos": "*",
-    "typo3/neos-nodetypes": "*"
+    "typo3/neos": "*"
   },
   "autoload": {
     "psr-0": {

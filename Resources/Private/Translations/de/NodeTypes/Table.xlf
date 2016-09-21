@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="" product-name="VIVOMEDIA.SimpleTable" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve" approved="yes">
+                <source>Table</source>
+            <target state="translated">Tabelle</target></trans-unit>
+            <trans-unit id="properties.hasTableHead.ui.label" xml:space="preserve" approved="yes">
+                <source>Has header row</source>
+            <target state="translated">Enthält Kopfzeile</target></trans-unit>
+            <trans-unit id="properties.hasHighlightColumn.ui.label" xml:space="preserve" approved="yes">
+                <source>Has highlight column</source>
+            <target state="translated">Enthält Highlight-Spalte</target></trans-unit>
+            <trans-unit id="ui.inspector.groups.data.label" xml:space="preserve" approved="yes">
+                <source>Data</source>
+            <target state="translated">Daten</target></trans-unit>
+            <trans-unit id="ui.inspector.groups.layout.label" xml:space="preserve">
+                <source>Layout</source>
+            <target></target></trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,82 @@
+prototype(VIVOMEDIA.SimpleTable:HtmlTable) < prototype(TYPO3.TypoScript:Tag) {
+
+  tagName = 'table'
+  attributes.class = TYPO3.TypoScript:RawArray
+  @context.data = ${[[]]}
+
+  content = TYPO3.TypoScript:RawArray {
+    tableHead = VIVOMEDIA.SimpleTable:HtmlTableHead {
+      @context.rows = ${[Array.first(data)]}
+
+      @if.hasTableHead = ${q(node).property('hasTableHead') && Type.isArray(data)}
+    }
+    tableBody = VIVOMEDIA.SimpleTable:HtmlTableBody {
+      @context.hasHightlightRow = ${q(node).property('hasHighlightColumn')}
+      @context.rows = ${q(node).property('hasTableHead') ? Array.shift(data) : data}
+    }
+  }
+  content.@process.combine = ${Array.join(value, '')}
+}
+
+prototype(VIVOMEDIA.SimpleTable:HtmlTableHead) < prototype(TYPO3.TypoScript:Tag) {
+  tagName = 'thead'
+  @context.rows = ${rows}
+  attributes.class = TYPO3.TypoScript:RawArray
+
+  content = TYPO3.TypoScript:Collection {
+    @context.isHeadRow = ${true}
+    collection = ${rows}
+    itemRenderer = VIVOMEDIA.SimpleTable:HtmlTableRow
+  }
+}
+
+
+prototype(VIVOMEDIA.SimpleTable:HtmlTableBody) < prototype(TYPO3.TypoScript:Tag) {
+  tagName = 'tbody'
+  attributes.class = TYPO3.TypoScript:RawArray
+
+  content = TYPO3.TypoScript:Collection {
+    collection = ${rows}
+    itemRenderer = VIVOMEDIA.SimpleTable:HtmlTableRow
+  }
+}
+
+prototype(VIVOMEDIA.SimpleTable:HtmlTableRow) < prototype(TYPO3.TypoScript:Tag) {
+  tagName = 'tr'
+  attributes.class = TYPO3.TypoScript:RawArray
+
+  content = TYPO3.TypoScript:Collection {
+    collection = ${item}
+    iterationName = 'iterator'
+    itemRenderer = TYPO3.TypoScript:Case {
+      highlight {
+        condition = ${(hasHightlightRow && iterator.index == 0) || isHeadRow}
+        renderer = VIVOMEDIA.SimpleTable:HtmlTableHighlightColumn
+      }
+      default {
+        condition = ${true}
+        renderer = VIVOMEDIA.SimpleTable:HtmlTableColumn
+      }
+    }
+  }
+}
+
+prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) < prototype(TYPO3.TypoScript:Tag) {
+  tagName = 'td'
+  content = TYPO3.TypoScript:Case {
+    default {
+      condition = ${true}
+      renderer = ${item}
+      @position = 'end'
+    }
+  }
+
+  attributes.class = TYPO3.TypoScript:RawArray
+}
+
+
+prototype(VIVOMEDIA.SimpleTable:HtmlTableHighlightColumn) < prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) {
+  tagName = 'th'
+  content = ${item}
+}
+

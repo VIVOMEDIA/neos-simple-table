@@ -1,0 +1,38 @@
+'VIVOMEDIA.SimpleTable:Table':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: i18n
+    icon: 'fa fa-table'
+    group: general
+    inlineEditable: false
+    inspector:
+      groups:
+        layout:
+          label: i18n
+        data:
+          label: i18n
+  properties:
+    hasTableHead:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          group: layout
+          reloadIfChanged: true
+
+    hasHighlightColumn:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          group: layout
+          reloadIfChanged: true
+
+    data:
+      type: string
+      ui:
+        inspector:
+          reloadIfChanged: true
+          group: 'data'
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
