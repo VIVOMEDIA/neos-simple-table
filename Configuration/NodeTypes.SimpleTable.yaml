@@ -17,22 +17,22 @@
       type: boolean
       ui:
         label: i18n
+        reloadIfChanged: true
         inspector:
           group: layout
-          reloadIfChanged: true
 
     hasHighlightColumn:
       type: boolean
       ui:
         label: i18n
+        reloadIfChanged: true
         inspector:
           group: layout
-          reloadIfChanged: true
 
     data:
       type: string
       ui:
+        reloadIfChanged: true
         inspector:
-          reloadIfChanged: true
           group: 'data'
           editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
