@@ -1,5 +1,5 @@
 {
-  "name": "vivomedia-neos/simple-table",
+  "name": "vivomedia/neos-simple-table",
   "type": "neos-package",
   "description": "Simple Html-Table NodeType for Neos CMS",
   "license": "MIT",
