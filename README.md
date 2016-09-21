@@ -11,7 +11,7 @@ Choose if a header row and/or a highlight column needs to be rendered.
 # Install
 Install via composer as a dev package
 ```bash
-php composer.phar require --dev "vivomedia/neos-simple-table" "~0.1"
+php composer.phar require "vivomedia/neos-simple-table" "~0.2"
 ```
 # Usage
 Just add well formated Csv with semicolon (;) as delimiter into the data-field of the inspector. 
