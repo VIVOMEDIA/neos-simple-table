@@ -2,6 +2,12 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
     <file original="" product-name="VIVOMEDIA.SimpleTable" source-language="en" datatype="plaintext">
         <body>
+            <trans-unit id="groups.data" xml:space="preserve">
+                <source>Data</source>
+            </trans-unit>
+            <trans-unit id="groups.layout" xml:space="preserve">
+                <source>Layout</source>
+            </trans-unit>
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Table</source>
             </trans-unit>
@@ -10,12 +16,6 @@
             </trans-unit>
             <trans-unit id="properties.hasHighlightColumn" xml:space="preserve">
                 <source>Has highlight column</source>
-            </trans-unit>
-            <trans-unit id="groups.data" xml:space="preserve">
-                <source>Data</source>
-            </trans-unit>
-            <trans-unit id="groups.layout" xml:space="preserve">
-                <source>Layout</source>
             </trans-unit>
         </body>
     </file>

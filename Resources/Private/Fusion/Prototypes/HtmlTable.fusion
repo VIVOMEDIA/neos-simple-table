@@ -1,10 +1,10 @@
-prototype(VIVOMEDIA.SimpleTable:HtmlTable) < prototype(TYPO3.TypoScript:Tag) {
+prototype(VIVOMEDIA.SimpleTable:HtmlTable) < prototype(Neos.Fusion:Tag) {
 
   tagName = 'table'
-  attributes.class = TYPO3.TypoScript:RawArray
+  attributes.class = Neos.Fusion:RawArray
   @context.data = ${[[]]}
 
-  content = TYPO3.TypoScript:RawArray {
+  content = Neos.Fusion:RawArray {
     tableHead = VIVOMEDIA.SimpleTable:HtmlTableHead {
       @context.rows = ${[Array.first(data)]}
 
@@ -18,37 +18,37 @@ prototype(VIVOMEDIA.SimpleTable:HtmlTable) < prototype(TYPO3.TypoScript:Tag) {
   content.@process.combine = ${Array.join(value, '')}
 }
 
-prototype(VIVOMEDIA.SimpleTable:HtmlTableHead) < prototype(TYPO3.TypoScript:Tag) {
+prototype(VIVOMEDIA.SimpleTable:HtmlTableHead) < prototype(Neos.Fusion:Tag) {
   tagName = 'thead'
   @context.rows = ${rows}
-  attributes.class = TYPO3.TypoScript:RawArray
+  attributes.class = Neos.Fusion:RawArray
 
-  content = TYPO3.TypoScript:Collection {
-    @context.isHeadRow = ${true}
+  content = Neos.Fusion:Collection {
+    @context.isHeadRow = true
     collection = ${rows}
     itemRenderer = VIVOMEDIA.SimpleTable:HtmlTableRow
   }
 }
 
 
-prototype(VIVOMEDIA.SimpleTable:HtmlTableBody) < prototype(TYPO3.TypoScript:Tag) {
+prototype(VIVOMEDIA.SimpleTable:HtmlTableBody) < prototype(Neos.Fusion:Tag) {
   tagName = 'tbody'
-  attributes.class = TYPO3.TypoScript:RawArray
+  attributes.class = Neos.Fusion:RawArray
 
-  content = TYPO3.TypoScript:Collection {
+  content = Neos.Fusion:Collection {
     collection = ${rows}
     itemRenderer = VIVOMEDIA.SimpleTable:HtmlTableRow
   }
 }
 
-prototype(VIVOMEDIA.SimpleTable:HtmlTableRow) < prototype(TYPO3.TypoScript:Tag) {
+prototype(VIVOMEDIA.SimpleTable:HtmlTableRow) < prototype(Neos.Fusion:Tag) {
   tagName = 'tr'
-  attributes.class = TYPO3.TypoScript:RawArray
+  attributes.class = Neos.Fusion:RawArray
 
-  content = TYPO3.TypoScript:Collection {
+  content = Neos.Fusion:Collection {
     collection = ${item}
     iterationName = 'iterator'
-    itemRenderer = TYPO3.TypoScript:Case {
+    itemRenderer = Neos.Fusion:Case {
       highlight {
         condition = ${(hasHightlightRow && iterator.index == 0) || isHeadRow}
         renderer = VIVOMEDIA.SimpleTable:HtmlTableHighlightColumn
@@ -61,17 +61,17 @@ prototype(VIVOMEDIA.SimpleTable:HtmlTableRow) < prototype(TYPO3.TypoScript:Tag) 
   }
 }
 
-prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) < prototype(TYPO3.TypoScript:Tag) {
+prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) < prototype(Neos.Fusion:Tag) {
   tagName = 'td'
-  content = TYPO3.TypoScript:Case {
+  content = Neos.Fusion:Case {
     default {
-      condition = ${true}
+      condition = true
       renderer = ${item}
       @position = 'end'
     }
   }
 
-  attributes.class = TYPO3.TypoScript:RawArray
+  attributes.class = Neos.Fusion:RawArray
 }
 
 
@@ -79,4 +79,3 @@ prototype(VIVOMEDIA.SimpleTable:HtmlTableHighlightColumn) < prototype(VIVOMEDIA.
   tagName = 'th'
   content = ${item}
 }
-
