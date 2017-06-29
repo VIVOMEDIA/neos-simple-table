@@ -1,6 +1,6 @@
-prototype(VIVOMEDIA.SimpleTable:Table) < prototype(TYPO3.Neos:Content) {
+prototype(VIVOMEDIA.SimpleTable:Table) < prototype(Neos.Neos:Content) {
 
-  attributes.class = TYPO3.TypoScript:RawArray {
+  attributes.class = Neos.Fusion:RawArray {
     responsive = 'table-responsive'
   }
 

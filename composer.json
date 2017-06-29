@@ -1,14 +1,14 @@
 {
   "name": "vivomedia/neos-simple-table",
-  "type": "neos-package",
+  "type": "neos-plugin",
   "description": "Simple Html-Table NodeType for Neos CMS",
   "license": "MIT",
   "require": {
     "typo3/neos": "*"
   },
   "autoload": {
-    "psr-0": {
-      "VIVOMEDIA\\SimpleTable": "Classes"
+    "psr-4": {
+      "VIVOMEDIA\\SimpleTable\\": "Classes"
     }
   },
   "extra": {

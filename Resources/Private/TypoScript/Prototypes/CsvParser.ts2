@@ -1,3 +1,0 @@
-prototype(VIVOMEDIA.SimpleTable:CsvParser) {
-  @class = 'VIVOMEDIA\\SimpleTable\\TypoScript\\CsvParserImplementation'
-}

@@ -2,19 +2,19 @@
 Simple Html-Table NodeType for Neos CMS
 
 ## What it provides
-Easily adding a Table-NodeType in Neos CMS. 
+Easily adding a Table-NodeType in Neos CMS.
 
 At the moment you can provide the data as **CSV string**. This will be parsed and rendered as HTML-Table.
 
-Choose if a header row and/or a highlight column needs to be rendered. 
+Choose if a header row and/or a highlight column needs to be rendered.
 
 # Install
-Install via composer as a dev package
+Install via composer
 ```bash
-php composer.phar require "vivomedia/neos-simple-table" "~0.3"
+composer require vivomedia/neos-simple-table
 ```
 # Usage
-Just add well formated Csv with semicolon (;) as delimiter into the data-field of the inspector. 
+Just add well formated Csv with semicolon (;) as delimiter into the data-field of the inspector.
 Choose if your data contains any header data and if you need the first column highlighted.
 
 # Extend
@@ -23,8 +23,8 @@ Choose if your data contains any header data and if you need the first column hi
 ```typoscript
 prototype(VIVOMEDIA.SimpleTable:HtmlTable) {
   attributes.class {
-    table = ${'table'}
-    striped = ${'table-striped'}
+    table = 'table'
+    striped = 'table-striped'
   }
 }
 ```
@@ -33,33 +33,33 @@ prototype(VIVOMEDIA.SimpleTable:HtmlTable) {
 ```typoscript
 prototype(VIVOMEDIA.SimpleTable:HtmlTableHead) {
   attributes.class {
-    something = ${'something-special'}
+    something = 'something-special'
   }
 }
 ```
 
 ## Render icons or something other special into the cell
-You can add some self-defined placeholders and replace them in your custom TypoScript. For example replace all `{true}` or `{false}` keywords with an icon:
+You can add some self-defined placeholders and replace them in your custom Fusion. For example replace all `{true}` or `{false}` keywords with an icon:
 ```
 prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) {
-  
+
   content {
-  
+
     isTrue {
       condition = ${item == '{true}'}
-      renderer = TYPO3.TypoScript:Tag) {
+      renderer = Neos.Fusion:Tag) {
         tagName = 'img'
-        attributes.src = TYPO3.TypoScript:ResourceUri {
+        attributes.src = Neos.Fusion:ResourceUri {
           path = 'resource://VIVOMEDIA.SitePackage/Public/icons/checked.svg'
         }
       }
     }
-    
+
     isFalse {
       condition = ${item == '{false}'}
-      renderer = TYPO3.TypoScript:Tag) {
+      renderer = Neos.Fusion:Tag) {
         tagName = 'img'
-        attributes.src = TYPO3.TypoScript:ResourceUri {
+        attributes.src = Neos.Fusion:ResourceUri {
           path = 'resource://VIVOMEDIA.SitePackage/Public/icons/unchecked.svg'
         }
       }

@@ -1,9 +1,9 @@
 'VIVOMEDIA.SimpleTable:Table':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: i18n
-    icon: 'fa fa-table'
+    icon: icon-table
     group: general
     inlineEditable: false
     inspector:
@@ -34,5 +34,5 @@
       ui:
         reloadIfChanged: true
         inspector:
-          group: 'data'
-          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: data
+          editor: 'Neos.Neos/Inspector/Editors/TextAreaEditor'
