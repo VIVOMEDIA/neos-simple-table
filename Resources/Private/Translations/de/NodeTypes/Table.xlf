@@ -11,6 +11,9 @@
             <trans-unit id="groups.layout" xml:space="preserve">
                 <source>Layout</source>
             </trans-unit>
+            <trans-unit id="properties.caption" xml:space="preserve">
+                <source>Tabellenbeschriftung</source>
+            </trans-unit>
             <trans-unit id="properties.hasTableHead" xml:space="preserve">
                 <source>Enthält Kopfzeile</source>
             </trans-unit>

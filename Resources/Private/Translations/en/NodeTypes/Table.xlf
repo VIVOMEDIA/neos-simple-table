@@ -11,6 +11,9 @@
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Table</source>
             </trans-unit>
+            <trans-unit id="properties.caption" xml:space="preserve">
+                <source>Caption</source>
+            </trans-unit>
             <trans-unit id="properties.hasTableHead" xml:space="preserve">
                 <source>Has header row</source>
             </trans-unit>

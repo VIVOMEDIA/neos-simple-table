@@ -5,7 +5,8 @@ prototype(VIVOMEDIA.SimpleTable:Table) < prototype(Neos.Neos:Content) {
   }
 
   table = VIVOMEDIA.SimpleTable:HtmlTable {
-    @context.data = VIVOMEDIA.SimpleTable:CsvParser {
+    caption = ${q(node).property('caption')}
+    data = VIVOMEDIA.SimpleTable:CsvParser {
       csv = ${q(node).property('data')}
     }
   }

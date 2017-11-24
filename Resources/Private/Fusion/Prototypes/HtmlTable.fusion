@@ -1,30 +1,42 @@
 prototype(VIVOMEDIA.SimpleTable:HtmlTable) < prototype(Neos.Fusion:Tag) {
-
   tagName = 'table'
   attributes.class = Neos.Fusion:RawArray
-  @context.data = ${[[]]}
 
-  content = Neos.Fusion:RawArray {
+  data = ${[[]]}
+  caption = null
+  @context {
+    data = ${this.data}
+    caption = ${this.caption}
+  }
+
+  content = Neos.Fusion:Array {
+    caption = Neos.Fusion:Tag {
+        @position = 'start 1'
+        @if.hasCaption = ${caption ? true : false}
+        tagName = 'caption'
+        content = ${caption}
+    }
     tableHead = VIVOMEDIA.SimpleTable:HtmlTableHead {
       @context.rows = ${[Array.first(data)]}
 
       @if.hasTableHead = ${q(node).property('hasTableHead') && Type.isArray(data)}
     }
     tableBody = VIVOMEDIA.SimpleTable:HtmlTableBody {
-      @context.hasHightlightRow = ${q(node).property('hasHighlightColumn')}
-      @context.rows = ${q(node).property('hasTableHead') ? Array.shift(data) : data}
+      @context {
+        hasHightlightRow = ${q(node).property('hasHighlightColumn')}
+        rows = ${q(node).property('hasTableHead') ? Array.shift(data) : data}
+      }
     }
   }
-  content.@process.combine = ${Array.join(value, '')}
 }
 
 prototype(VIVOMEDIA.SimpleTable:HtmlTableHead) < prototype(Neos.Fusion:Tag) {
   tagName = 'thead'
-  @context.rows = ${rows}
   attributes.class = Neos.Fusion:RawArray
 
+  @context.isHeadRow = true
+
   content = Neos.Fusion:Collection {
-    @context.isHeadRow = true
     collection = ${rows}
     itemRenderer = VIVOMEDIA.SimpleTable:HtmlTableRow
   }
@@ -73,7 +85,6 @@ prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) < prototype(Neos.Fusion:Tag) {
 
   attributes.class = Neos.Fusion:RawArray
 }
-
 
 prototype(VIVOMEDIA.SimpleTable:HtmlTableHighlightColumn) < prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) {
   tagName = 'th'
