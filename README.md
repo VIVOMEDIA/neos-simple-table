@@ -15,7 +15,7 @@ composer require vivomedia/neos-simple-table:~2.0
 ```
 # Usage
 Just add well formated Csv with semicolon (;) as delimiter into the data-field of the inspector.
-Choose if your data contains any header data and if you need the first column highlighted.
+Choose if your data contains any header data and if you need the first column highlighted. Also you may add a caption for your table.
 
 # Extend
 ## Add attributes to result table

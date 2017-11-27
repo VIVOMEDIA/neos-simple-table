@@ -10,11 +10,9 @@ prototype(VIVOMEDIA.SimpleTable:HtmlTable) < prototype(Neos.Fusion:Tag) {
   }
 
   content = Neos.Fusion:Array {
-    caption = Neos.Fusion:Tag {
-        @position = 'start 1'
+    caption = VIVOMEDIA.SimpleTable:HtmlTableCaption {
         @if.hasCaption = ${caption ? true : false}
-        tagName = 'caption'
-        content = ${caption}
+        @context.caption = ${caption}
     }
     tableHead = VIVOMEDIA.SimpleTable:HtmlTableHead {
       @context.rows = ${[Array.first(data)]}
@@ -28,6 +26,11 @@ prototype(VIVOMEDIA.SimpleTable:HtmlTable) < prototype(Neos.Fusion:Tag) {
       }
     }
   }
+}
+
+prototype(VIVOMEDIA.SimpleTable:HtmlTableCaption) < prototype(Neos.Fusion:Tag) {
+	tagName = 'caption'
+	content = ${caption}
 }
 
 prototype(VIVOMEDIA.SimpleTable:HtmlTableHead) < prototype(Neos.Fusion:Tag) {
