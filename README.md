@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/vivomedia/neos-simple-table/v/stable)](https://packagist.org/packages/vivomedia/neos-simple-table)
+[![Total Downloads](https://poser.pugx.org/vivomedia/neos-simple-table/downloads)](https://packagist.org/packages/vivomedia/neos-simple-table)
+[![License](https://poser.pugx.org/vivomedia/neos-simple-table/license)](https://packagist.org/packages/vivomedia/neos-simple-table)
+
+
 # VIVOMEDIA Neos-Simple-Table
 Simple Html-Table NodeType for Neos CMS
 
