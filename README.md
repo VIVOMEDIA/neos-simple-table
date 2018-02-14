@@ -1,6 +1,7 @@
 [![Latest Stable Version](https://poser.pugx.org/vivomedia/neos-simple-table/v/stable)](https://packagist.org/packages/vivomedia/neos-simple-table)
 [![Total Downloads](https://poser.pugx.org/vivomedia/neos-simple-table/downloads)](https://packagist.org/packages/vivomedia/neos-simple-table)
 [![License](https://poser.pugx.org/vivomedia/neos-simple-table/license)](https://packagist.org/packages/vivomedia/neos-simple-table)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d1c2f796f40a2c5c8eb9/maintainability)](https://codeclimate.com/github/vivomedia-de/neos-simple-table/maintainability)
 
 
 # VIVOMEDIA Neos-Simple-Table
