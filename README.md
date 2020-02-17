@@ -17,7 +17,7 @@ Choose if a header row and/or a highlight column needs to be rendered.
 # Install
 Install via composer
 ```bash
-composer require vivomedia/neos-simple-table:~2.1
+composer require vivomedia/neos-simple-table
 ```
 # Usage
 Just add well formated Csv with semicolon (;) as delimiter into the data-field of the inspector.
