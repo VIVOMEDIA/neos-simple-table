@@ -1,5 +1,7 @@
 prototype(VIVOMEDIA.SimpleTable:Table) < prototype(Neos.Neos:Content) {
 
+  templatePath = 'resource://VIVOMEDIA.SimpleTable/Private/Templates/NodeTypes/Table.html'
+
   attributes.class = Neos.Fusion:RawArray {
     responsive = 'table-responsive'
   }
