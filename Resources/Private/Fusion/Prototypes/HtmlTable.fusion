@@ -91,5 +91,4 @@ prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) < prototype(Neos.Fusion:Tag) {
 
 prototype(VIVOMEDIA.SimpleTable:HtmlTableHighlightColumn) < prototype(VIVOMEDIA.SimpleTable:HtmlTableColumn) {
   tagName = 'th'
-  content = ${item}
 }
