@@ -5,7 +5,7 @@
 
 
 # VIVOMEDIA Neos-Simple-Table
-Simple Html-Table NodeType for Neos CMS
+Simple Html-Table NodeType for Neos CMS.
 
 ## What it provides
 Easily adding a Table-NodeType in Neos CMS.
