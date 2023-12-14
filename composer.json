@@ -4,7 +4,7 @@
     "description": "Simple Html-Table NodeType for Neos CMS",
     "license": "MIT",
     "require": {
-        "neos/neos": "~5.0 || ~7.0"
+        "neos/neos": "~5.0 || ~7.0 || ~8.0"
     },
     "autoload": {
         "psr-4": {
@@ -97,7 +97,16 @@
             "Neos.Flow-20201205172733",
             "Neos.Flow-20201207104500",
             "VIVOMEDIA.Bootstrap-20210412133202",
-            "VIVOMEDIA.Bootstrap-20210412135909"
+            "VIVOMEDIA.Bootstrap-20210412135909",
+            "Neos.Neos-20220318111600",
+            "Neos.Flow-20220318174300",
+            "Neos.Fusion-20220326120900",
+            "VIVOMEDIA.Bootstrap-20230421124133",
+            "VIVOMEDIA.Bootstrap-20230421143347",
+            "VIVOMEDIA.Bootstrap-20230710143351",
+            "VIVOMEDIA.Bootstrap-20230712134441",
+            "VIVOMEDIA.Listable-20230731181312",
+            "VIVOMEDIA.NodeTypes-20230821182214"
         ]
     }
 }
