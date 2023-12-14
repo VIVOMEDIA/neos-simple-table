@@ -97,7 +97,8 @@
             "Neos.Flow-20201205172733",
             "Neos.Flow-20201207104500",
             "VIVOMEDIA.Bootstrap-20210412133202",
-            "VIVOMEDIA.Bootstrap-20210412135909"
+            "VIVOMEDIA.Bootstrap-20210412135909",
+            "Neos.Neos-20220318111600"
         ]
     }
 }
