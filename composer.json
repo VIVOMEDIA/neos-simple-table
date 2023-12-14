@@ -99,7 +99,8 @@
             "VIVOMEDIA.Bootstrap-20210412133202",
             "VIVOMEDIA.Bootstrap-20210412135909",
             "Neos.Neos-20220318111600",
-            "Neos.Flow-20220318174300"
+            "Neos.Flow-20220318174300",
+            "Neos.Fusion-20220326120900"
         ]
     }
 }
